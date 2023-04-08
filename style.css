@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: cadetblue;
+    flex-direction: column;
+}
+section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 0 0 50px black;
+}
+.jeu{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px solid black ;
+}
+.hero{
+    width: 20px;
+    height: 50px;
+    position: relative;
+    top:150px;
+    object-fit: cover;
+}
+.animation{
+    animation: hero-saut 500ms infinite;  
+}
+/*action de sauter:*/
+@keyframes hero-saut{
+    0%{
+        top:130px;
+    }
+    25%{
+        top:80px;
+    }
+    50%{
+        top:80px;
+    }
+    100%{
+        top:130px;
+    }
+}
+.hero img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.obstacles{
+    width: 20px ;
+    height: 20px ;
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+    top:130px;
+    left: 480px;
+    animation: mouvement-obstacles 2.5s infinite; 
+}
+/*mouvement de lobstacles*/
+@keyframes mouvement-obstacles{
+    0%{
+        left:480px;
+    }
+    100%{
+        left:-40px;
+    }
+}
+.comandes{
+    margin-top:20px;
+    text-align: center;
+}
+a,button{
+    padding: 10px 50px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow:0 0 10px black ;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    font-size: 15px ;
+    text-decoration: 0;
+    color: black;
+
+}
